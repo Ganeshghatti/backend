@@ -32,6 +32,9 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get("/", async (req,res)=>{
+  res.send("<H1>success</H1>")
+})
 app.post("/login", async (req, res) => {
   const userdata = req.body.userdata;
   try {
